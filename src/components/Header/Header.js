@@ -1,15 +1,15 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
 
-import { COLORS, WEIGHTS } from '../../constants';
-import Logo from '../Logo';
-import SuperHeader from '../SuperHeader';
+import { COLORS, WEIGHTS } from "../../constants";
+import Logo from "../Logo";
+import SuperHeader from "../SuperHeader";
 
 const Header = () => {
   // Our site features two visual headers, but they should be
   // grouped semantically as a single header.
   return (
-    <header>
+    <HeaderWrapper>
       <SuperHeader />
       <MainHeader>
         <CenteringItem>
@@ -25,9 +25,16 @@ const Header = () => {
         </Nav>
         <CenteringItem />
       </MainHeader>
-    </header>
+    </HeaderWrapper>
   );
 };
+
+const HeaderWrapper = styled.header`
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: ${COLORS.white};
+`;
 
 const CenteringItem = styled.div`
   flex: 1;
@@ -39,7 +46,6 @@ const MainHeader = styled.div`
   border-bottom: 1px solid ${COLORS.gray[300]};
   display: flex;
   align-items: center;
-  position: relative;
   gap: 48px;
 `;
 
