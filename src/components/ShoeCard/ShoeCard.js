@@ -152,12 +152,6 @@ const ColorInfo = styled.p`
   color: ${COLORS.gray[700]};
 `;
 
-// eslint-disable-next-line
-const SalePrice = styled.span`
-  font-weight: ${WEIGHTS.medium};
-  color: ${COLORS.primary};
-`;
-
 const InfoTag = styled.span`
   background-color: var(--backgroundColor);
   font-family: inherit;
